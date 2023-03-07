@@ -1,0 +1,13 @@
+Page 1:
+    Main page:
+        Menu:
+            Button 1: Link to "Terran" page.
+            Button 2: Link to "Zerg" page.
+            Button 3: Link to "Protoss" page.
+        Top-right:
+            Button: Register
+            Button: Login
+        Main title:
+            "Starcraft"
+        Paragraph:
+            "TEXT"

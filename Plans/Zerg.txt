@@ -1,0 +1,11 @@
+Page 3:
+    Zerg page:
+        Main title:
+            "ZERG"
+        Paragraph:
+            "TEXT"
+        Chart:
+            Image of Unit:
+            Unit name:
+            Paragraph:
+                "TEXT"
