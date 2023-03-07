@@ -1,0 +1,11 @@
+Page 2:
+    Terran page:
+        Main title:
+            "TERRAN"
+        Paragraph:
+            "TEXT"
+        Chart:
+            Image of Unit:
+            Unit name:
+            Paragraph:
+                "TEXT"

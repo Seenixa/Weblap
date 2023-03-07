@@ -1,0 +1,5 @@
+Page 6:
+    Login:
+        Input field: Username
+        Input field: E-mail address
+        Input field: Password

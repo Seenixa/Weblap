@@ -1,0 +1,11 @@
+Page 4:
+    Protoss page:
+        Main title:
+            "PROTOSS"
+        Paragraph:
+            "TEXT"
+        Chart:
+            Image of Unit:
+            Unit name:
+            Paragraph:
+                "TEXT"
