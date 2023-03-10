@@ -16,6 +16,27 @@ Page 3:
                 -Creep terül szét a zerg bázis körül, ami tápláló biológiai anyaggal látja el azt"
         Chart:
             Image of Unit:
+
             Unit name:
+                        Drone
+                        Zergling
+                Queen
+                Overlord
+                Baneling
+                Roach
+                Ravager
+                        Hydralisk
+                        Lurker
+                        Mutalisk
+                Corruptor
+                Viper
+                Brood lord
+                Swarm host
+                        Infestor
+                        Ultralisk
+
             Paragraph:
                 "TEXT"
+
+
+Unit name: 2 tabbal kintebb amit beleépítenék.
