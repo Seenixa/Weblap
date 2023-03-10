@@ -3,7 +3,19 @@ Page 2:
         Main title:
             "TERRAN"
         Paragraph:
-            "TEXT"
+            "Találékony emberek, változatos technológiával és sokoldalú katonai képességekkel
+
+            A Koprulu szektort benépesítő fajak közül a legifjabb a Terran. Évszázodokkal ezelőtt, a földről indított 
+            katasztrófális kolonizáló expedició leszármozattai ők, akik nem rendelkeznek fejlett technológiával 
+            mint a protosok, vagy biológiai fejlettséggel mint a zergek.
+            A terran katonai erők ellenálló, sokoldalú egységek változatos keverékére támaszkodnak,
+            hogy kijátsszák ellenségeiket.
+
+            Egyedi jellemzők:
+
+                -Épületek amik felemelkednek
+                -Átalakuló egységek mint a Viking és a Hellion
+                -Rengeteg használható stratégia, gyalogos és gépesített stílust magába foglalva
         Chart:
             Image of Unit:
             Unit name:

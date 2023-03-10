@@ -3,7 +3,16 @@ Page 4:
         Main title:
             "PROTOSS"
         Paragraph:
-            "TEXT"
+            "Ősi, nemes harcosok arany armadával és fejlett pszionikus technológiával.
+
+            Évezredek óta az ősi és titokzatos protossok uralták és védték a galaxis azon részét, amit ők uraltak.
+            Az egyes protoss harcosok felülmúlhatatlanok képességekkel és bátorsággal rendelkeznek, amelyet a technológia és a
+            félelmetes pszionikus erő kombinációja nagymértékben növel.
+
+            Egyedi jellemzők:
+                -Idővel újratöltődő pajzsú egységek
+                -Erős egyedi egységek mint a Colossus és a Carrier
+                -Wrap Gate technológia egységek létrehozásához"
         Chart:
             Image of Unit:
             Unit name:

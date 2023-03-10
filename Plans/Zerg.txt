@@ -3,7 +3,17 @@ Page 3:
         Main title:
             "ZERG"
         Paragraph:
-            "TEXT"
+            "Irgalmatlan lények vad raja, amely világokat pusztít el.
+
+            A ravasz Queen of Blades vezérletével az idegen zerg faj kész elszabadítani a poklot a galaxisban,
+            felemésztve mindent ami az útjukba áll. A zergek nem használnak technológiát fegyvereik, páncéljuk vagy 
+            csillaghajóik megalkotásához, ehelyett ezeket ezeket a hiályosságokat biológiai adaptációval és tervezett mutációval 
+            töltik be hatékonyan.
+
+            Egyedi jellemzők:
+                -Egységek, amelyek a felszín alá ássák magukat
+                -Gyorsan mozgó egységek raja, mint pédául a Zerglingek vagya Mutaliskek
+                -Creep terül szét a zerg bázis körül, ami tápláló biológiai anyaggal látja el azt"
         Chart:
             Image of Unit:
             Unit name:
