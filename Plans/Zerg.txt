@@ -20,6 +20,7 @@ Page 3:
             Unit name:
                         Drone
                         Zergling
+                        Hydralisk
                 Queen
                 Overlord
                 Baneling
