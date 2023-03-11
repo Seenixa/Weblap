@@ -20,10 +20,7 @@ Page 4:
                         Probe
                         Zealot
                         Stalker
-                Adept
-                Immortal
                         Colossus
-                Disruptor
                         Carrier
                         High templar
                         Dark templar
