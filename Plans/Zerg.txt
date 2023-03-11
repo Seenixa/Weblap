@@ -21,17 +21,9 @@ Page 3:
                         Drone
                         Zergling
                         Hydralisk
-                Queen
-                Overlord
-                Baneling
-                Roach
-                Ravager
+                        Queen
                         Lurker
                         Mutalisk
-                Corruptor
-                Viper
-                Brood lord
-                Swarm host
                         Infestor
                         Ultralisk
 
