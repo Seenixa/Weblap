@@ -24,14 +24,9 @@ Page 2:
                         Marine
                         Marauder
                         Ghost
-                Reaper
-                Widow mine
                         Siege Tank
                         Thor
                         Medivac
-                Raven
-                Banshee
-                Liberator
                         Battlecruiser
             Paragraph:
                 "TEXT"
