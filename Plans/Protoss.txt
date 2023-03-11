@@ -17,6 +17,7 @@ Page 4:
             Image of Unit:
 
             Unit name:
+                        Probe
                         Zealot
                         Stalker
                 Adept
