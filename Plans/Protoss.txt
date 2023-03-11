@@ -15,6 +15,20 @@ Page 4:
                 -Wrap Gate technológia egységek létrehozásához"
         Chart:
             Image of Unit:
+
             Unit name:
+                        Zealot
+                        Stalker
+                Adept
+                Immortal
+                        Colossus
+                Disruptor
+                        Carrier
+                        High templar
+                        Dark templar
+                        Archon
             Paragraph:
                 "TEXT"
+
+
+Unit name: 2 tabbal kintebb amit beleépítenék.

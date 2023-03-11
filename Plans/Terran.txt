@@ -18,6 +18,23 @@ Page 2:
                 -Rengeteg használható stratégia, gyalogos és gépesített stílust magába foglalva
         Chart:
             Image of Unit:
+
             Unit name:
+                        SCV
+                        Marine
+                        Marauder
+                Reaper
+                Widow mine
+                        Siege Tank
+                        Thor
+                        Medivac
+                Raven
+                Banshee
+                Liberator
+                        Battlecruiser
             Paragraph:
                 "TEXT"
+
+
+
+Unit name: 2 tabbal kintebb amit beleépítenék.

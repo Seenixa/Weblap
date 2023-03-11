@@ -1,5 +1,11 @@
 Page 1:
     Main page:
+        Drop-down menu:
+            Links: 
+                Starcraft official page
+                Starcraft II official page
+                Starcraft Wikipedia page
+
         Menu:
             Button 1: Link to "Terran" page.
             Button 2: Link to "Zerg" page.
