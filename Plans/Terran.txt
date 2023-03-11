@@ -23,6 +23,7 @@ Page 2:
                         SCV
                         Marine
                         Marauder
+                        Ghost
                 Reaper
                 Widow mine
                         Siege Tank
