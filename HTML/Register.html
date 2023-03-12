@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Starcraft | Regisztráció</title>
-    <meta name="description" content="Regisztráció" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-  </head>
-  <body>
-    <a href="index.html">Főoldal</a>
-    <form action="/action_page.php">
-      <label for="fname">First name:</label>
-      <input type="text" id="fname" name="fname" /><br /><br />
-      <label for="lname">Last name:</label>
-      <input type="text" id="lname" name="lname" /><br /><br />
-      <input type="submit" value="Submit" />
-    </form>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starcraft | Regisztráció</title>
+  <meta name="description" content="Regisztráció">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+  <a href="index.html">Főoldal</a>
+
+  <form action="valami.php" method="post" enctype="multipart/form-data">
+
+    <label>Felhasználó Név: <input type="text" name="nev" value="" placeholder="Név" maxlength="20" minlength="5"
+        autofocus tabindex="1" required>
+    </label> <br />
+    <label>E-mail cím: <input type="email" name="email" value="" placeholder="E-mail" tabindex="2" required></label>
+    <br />
+    <label>E-mail cím megerősítése: <input type="email" name="RepeatEmail" value="" placeholder="E-mail" tabindex="3"
+        required></label> <br />
+    <label>Jelszó: <input type="password" name="pw" value="" placeholder="Jelszó" maxlength="20" minlength="5"
+        tabindex="4" required></label> <br />
+    <label>Jelszó megerősítése: <input type="password" name="Repeatpw" value="" placeholder="Jelszó" maxlength="20"
+        minlength="5" tabindex="5" required></label> <br />
+
+    <p> Melyik faj tetszik eddig a legjobban? </p>
+    <select name="race">
+      <option selected disabled>Válassz</option>
+      <option value="Terran">Terran</option>
+      <option value="Zerg">Zerg</option>
+      <option value="Protoss">Protoss</option>
+    </select> <br />
+
+    <input type="reset" value="Törlés" /> <br />
+    <input type="submit" value="Küldés" />
+
+</body>
+
 </html>
