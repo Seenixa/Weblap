@@ -1,29 +1,193 @@
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1; font-family: arial, serif;}
-h1{font-size: 25px;}h2{font-size: 21px;padding: 20px 0}h3{font-size: 18px;}h4{font-size: 16px;}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
-ins{background-color:#ff9;color:#000;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
-
-body,html {
-	background-color: rgba(181, 181, 181, 0.981);
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
 }
+
+body {
+    line-height: 1;
+    font-family: arial, serif;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 21px;
+    padding: 20px 0
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+nav ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold
+}
+
+del {
+    text-decoration: line-through
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+body,
+html {
+    background-color: rgba(181, 181, 181, 0.981);
+}
+
 header {
     padding: 20px 30px;
     max-width: 940px;
     margin: auto;
 }
+
 nav {
     display: inline-block;
 }
+
 nav ul li a {
     background: rgb(28, 28, 207);
     padding: 2px 10px;
@@ -33,55 +197,65 @@ nav ul li a {
     color: #000000;
     border-radius: 10px;
 }
+
 nav ul li a:hover {
-	background: #6a7ced;
+    background: #6a7ced;
 }
+
 nav ul li {
     display: inline-block;
     margin: 10px;
 }
+
 nav ul {
     list-style: none;
 }
+
 #pageContent {
     max-width: 1000px;
     margin: auto;
     border: none;
 }
+
 main {
-	float: left;
-	width: 60%;
+    float: left;
+    width: 60%;
 }
+
 aside {
-	float: right;
-	width: 30%;
+    float: right;
+    width: 30%;
 }
+
 article {
     border-bottom: 2px dotted #999;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
 article h2 {
     font-weight: normal;
     margin-bottom: 12px;
 }
 
 footer {
-	background: #AEC6CF;
-	max-width: 1000px;
-	margin: auto;
-	clear: both;
-	text-align: right;
-}
-footer p {
-	padding: 20px;
+    background: #AEC6CF;
+    max-width: 1000px;
+    margin: auto;
+    clear: both;
+    text-align: right;
 }
 
-aside > div {
-	margin: 10px auto;
-	background: #AEC6CF;
-	min-height: 100px;
+footer p {
+    padding: 20px;
 }
+
+aside>div {
+    margin: 10px auto;
+    background: #AEC6CF;
+    min-height: 100px;
+}
+
 #logo {
     display: inline-block;
     vertical-align: middle;
@@ -89,71 +263,137 @@ aside > div {
     margin-right: 75px;
     color: #FFF;
 }
+
 #logo img {
     width: 50px;
     vertical-align: middle;
     margin-right: 10px;
 }
-body > section {
+
+body>section {
     max-width: 1000px;
     margin: auto;
     padding: 30px;
     border-bottom: 1px solid #999;
     color: #333;
 }
-section > a{
-    background-color:rgb(2, 2, 80);
+
+section>a {
+    background-color: rgb(2, 2, 80);
     color: white;
     float: right;
     margin: 10px;
 }
+
+/* Globális */
+
+
+
+
+/* Főoldal */
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
 /*Races oldalakra vonatkozó*/
-img.racesH1{
+
+img.racesH1 {
     height: 80px;
 }
-img.unit{
+
+img.unit {
     height: 80px;
     border-radius: 20%;
     margin-left: 10px;
 }
-table{
-    /*formázás könnyebbítő*/border: 1px solid #000000;
-    border-collapse:collapse;
+
+table {
+    /*formázás könnyebbítő*/
+    border: 1px solid #000000;
+    border-collapse: collapse;
     margin: auto;
     max-width: 780px;
 }
-td{
-    /*formázás könnyebbítő*/border: 1px solid #000000;
-    padding:5px
+
+td {
+    /*formázás könnyebbítő*/
+    border: 1px solid #000000;
+    padding: 5px
 }
 
-/* Lore page */
+/* Regisztráció */
 
-.LoreMain{
+
+
+/* Bejelentkezés */
+
+
+
+
+/* Lore oldal */
+
+.LoreMain {
     font-size: 32px;
     font-weight: bold;
     margin-left: 35%;
     padding-bottom: 10px;
 }
 
-.LoreSecond{
+.LoreSecond {
     padding-left: 480px;
     padding-bottom: 10px;
     padding-top: 20px;
 }
 
-.LoreParagraph{
+.LoreParagraph {
     padding-left: 480px;
     padding-right: 480px;
     padding-bottom: 10px;
     font-size: 18px;
 }
 
-.BackToTop{
+.BackToTop {
     padding-left: 480px;
 }
 
-.LoreFooter{
+.LoreFooter {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 480px;
