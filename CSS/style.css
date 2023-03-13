@@ -1,8 +1,6 @@
 html,
 body,
 div,
-span,
-object,
 iframe,
 h1,
 h2,
@@ -10,38 +8,10 @@ h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
 img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
 ul,
 li,
-fieldset,
 form,
-label,
-legend,
 table,
 caption,
 tbody,
@@ -51,22 +21,11 @@ tr,
 th,
 td,
 article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
 menu,
 nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+section{
     margin: 0;
     padding: 0;
     border: 0;
@@ -77,7 +36,6 @@ video {
 }
 
 body {
-    line-height: 1;
     font-family: arial, serif;
 }
 
@@ -98,133 +56,14 @@ h4 {
     font-size: 16px;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block
-}
-
-nav ul {
-    list-style: none
-}
-
-blockquote,
-q {
-    quotes: none
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: none
-}
-
-a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent
-}
-
-ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none
-}
-
-mark {
-    background-color: #ff9;
-    color: #000;
-    font-style: italic;
-    font-weight: bold
-}
-
-del {
-    text-decoration: line-through
-}
-
-abbr[title],
-dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0
-}
-
-input,
-select {
-    vertical-align: middle
-}
-
-body,
-html {
+body, html {
     background-color: rgba(181, 181, 181, 0.981);
-}
-
-header {
-    padding: 20px 30px;
-    max-width: 940px;
-    margin: auto;
-}
-
-nav {
-    display: inline-block;
-}
-
-nav ul li a {
-    background: rgb(28, 28, 207);
-    padding: 2px 10px;
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #000000;
-    border-radius: 10px;
-}
-
-nav ul li a:hover {
-    background: #6a7ced;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 10px;
-}
-
-nav ul {
-    list-style: none;
 }
 
 #pageContent {
     max-width: 1000px;
     margin: auto;
     border: none;
-}
-
-main {
-    float: left;
-    width: 60%;
-}
-
-aside {
-    float: right;
-    width: 30%;
 }
 
 article {
@@ -250,25 +89,8 @@ footer p {
     padding: 20px;
 }
 
-aside>div {
-    margin: 10px auto;
-    background: #AEC6CF;
-    min-height: 100px;
-}
 
-#logo {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 30px;
-    margin-right: 75px;
-    color: #FFF;
-}
-
-#logo img {
-    width: 50px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
+/* Globális */
 
 body>section {
     max-width: 1000px;
@@ -277,18 +99,62 @@ body>section {
     border-bottom: 1px solid #999;
     color: #333;
 }
+body, html {
+    height: 100%;
+}
+/*főoldal háttérehez tartozik*/
+.bg {
+    /* The image used */
+    background-image: url("../Images/Starcraft.jpeg");
 
-section>a {
-    background-color: rgb(2, 2, 80);
-    color: white;
-    float: right;
-    margin: 10px;
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/* Globális */
+/* Style the navigation menu */
+nav ul {
+    list-style: none
+}
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+}
+/* Navigation links */
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 15%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center; /* If you want the text to be centered */
 
-
-
+}
+/* Navigatin menu, Add a background color on mouse-over */
+.navbar a:hover {
+    background-color: #000;
+}
+/* Navigatin menu, Style the current/active link */
+.navbar a.active {
+    background-color: #04AA6D;
+}
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left; /* If you want the text to be left-aligned on small screens */
+    }
+}
 
 /* Főoldal */
 
@@ -339,9 +205,11 @@ img.racesH1 {
 }
 
 img.unit {
-    height: 80px;
+    width: 80px;
     border-radius: 20%;
-    margin-left: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table {
@@ -357,7 +225,9 @@ td {
     border: 1px solid #000000;
     padding: 5px
 }
-
+td.tablaEgysegnev{
+    text-align: center;
+}
 /* Regisztráció */
 
 
