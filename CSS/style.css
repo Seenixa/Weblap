@@ -111,6 +111,7 @@ html {
 .bg {
     /* The image used */
     background-image: url("../Images/Starcraft.jpeg");
+    font-size: 80px;
 
     /* Full height */
     height: 100%;
@@ -127,12 +128,8 @@ nav ul {
 }
 
 .navbar {
-    height: 40px;
-    padding: 0px;
-    margin: 0;
+    background: rgba(20,36,51,.8) linear-gradient(0deg,rgba(20,61,102,.2),rgba(20,61,102,0) 50%);
     width: 100%;
-    background-color: rgba(74, 74, 74, 0.981);
-    border: solid white 1px;
     overflow: auto;
     /* Set the navbar to fixed position */
     position: fixed;
@@ -143,13 +140,12 @@ nav ul {
 /* Navigation links */
 .navbar a {
     float: left;
-    padding: 12px;
-    border: solid white 1px;
     color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-decoration: none;
-    font-size: 17px;
+    padding:12px 0px 12px;
     /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-    width: 15%;
+    width: 20%;
     /* If you want the text to be centered */
     text-align: center;
 
@@ -162,19 +158,7 @@ nav ul {
 
 /* Navigatin menu, Style the current/active link */
 .navbar a.active {
-    background-color: #04AA6D;
-}
-
-/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
-@media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-        width: 100%;
-        /* If you want the text to be left-aligned on small screens */
-        text-align: left;
-
-    }
+    background-color: rgba(153,102,0,.6);
 }
 
 /* Főoldal */
@@ -264,7 +248,6 @@ td.tablaEgysegnev {
 
 .LoreMain {
     color: white;
-    margin-top: 40px;
     padding-top: 10px;
     font-size: 32px;
     font-weight: bold;
