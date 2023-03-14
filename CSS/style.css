@@ -25,7 +25,7 @@ footer,
 header,
 menu,
 nav,
-section{
+section {
     margin: 0;
     padding: 0;
     border: 0;
@@ -56,12 +56,14 @@ h4 {
     font-size: 16px;
 }
 
-body, html {
-    background-color: rgba(181, 181, 181, 0.981);
+body,
+html {
+    background-color: rgba(74, 74, 74, 0.981);
 }
 
 #pageContent {
     max-width: 1000px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin: auto;
     border: none;
 }
@@ -97,11 +99,14 @@ body>section {
     margin: auto;
     padding: 30px;
     border-bottom: 1px solid #999;
-    color: #333;
+    color: #ffffff;
 }
-body, html {
+
+body,
+html {
     height: 100%;
 }
+
 /*főoldal háttérehez tartozik*/
 .bg {
     /* The image used */
@@ -120,39 +125,55 @@ body, html {
 nav ul {
     list-style: none
 }
+
 .navbar {
+    height: 40px;
+    padding: 0px;
+    margin: 0;
     width: 100%;
-    background-color: #555;
+    background-color: rgba(74, 74, 74, 0.981);
+    border: solid white 1px;
     overflow: auto;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
+    /* Set the navbar to fixed position */
+    position: fixed;
+    /* Position the navbar at the top of the page */
+    top: 0;
 }
+
 /* Navigation links */
 .navbar a {
     float: left;
     padding: 12px;
+    border: solid white 1px;
     color: white;
     text-decoration: none;
     font-size: 17px;
-    width: 15%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-    text-align: center; /* If you want the text to be centered */
+    /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    width: 15%;
+    /* If you want the text to be centered */
+    text-align: center;
 
 }
+
 /* Navigatin menu, Add a background color on mouse-over */
 .navbar a:hover {
     background-color: #000;
 }
+
 /* Navigatin menu, Style the current/active link */
 .navbar a.active {
     background-color: #04AA6D;
 }
+
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 500px) {
     .navbar a {
         float: none;
         display: block;
         width: 100%;
-        text-align: left; /* If you want the text to be left-aligned on small screens */
+        /* If you want the text to be left-aligned on small screens */
+        text-align: left;
+
     }
 }
 
@@ -225,9 +246,11 @@ td {
     border: 1px solid #000000;
     padding: 5px
 }
-td.tablaEgysegnev{
+
+td.tablaEgysegnev {
     text-align: center;
 }
+
 /* Regisztráció */
 
 
@@ -240,33 +263,72 @@ td.tablaEgysegnev{
 /* Lore oldal */
 
 .LoreMain {
+    color: white;
+    margin-top: 40px;
+    padding-top: 10px;
     font-size: 32px;
     font-weight: bold;
-    margin-left: 35%;
-    padding-bottom: 10px;
+    font-style: italic;
+    text-align: center;
 }
 
 .LoreSecond {
-    padding-left: 480px;
-    padding-bottom: 10px;
-    padding-top: 20px;
+    text-align: left;
+    color: #ffffff;
+    padding: 0;
+    border-top: white solid 1px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+
 }
 
 .LoreParagraph {
-    padding-left: 480px;
-    padding-right: 480px;
-    padding-bottom: 10px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-indent: 20px;
+    padding: 0px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: 780px;
+    text-align: left;
     font-size: 18px;
 }
 
 .BackToTop {
-    padding-left: 480px;
+    background-color: darkblue;
+    border: rgb(255, 255, 255) solid 1px;
+    border-radius: 40%;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    margin-left: 20%;
+    text-decoration: none;
 }
 
 .LoreFooter {
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-left: 480px;
-    margin-right: 460px;
+    margin-left: 20%;
+    margin-right: 20%;
     text-align: center;
 }
+
+
+/*
+.LoreBody {
+    background-image: url("../Images/wallpapers/Battleship.jpg");
+
+    /* Full height /
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+*/
