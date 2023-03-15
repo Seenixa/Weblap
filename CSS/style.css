@@ -58,7 +58,7 @@ h4 {
 
 body,
 html {
-    background-color: rgba(74, 74, 74, 0.981);
+    background-color: #002650;
 }
 
 #pageContent {
@@ -219,7 +219,8 @@ img.unit {
 
 table {
     /*formázás könnyebbítő*/
-    border: 1px solid #000000;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
     border-collapse: collapse;
     margin: auto;
     max-width: 780px;
@@ -227,7 +228,7 @@ table {
 
 td {
     /*formázás könnyebbítő*/
-    border: 1px solid #000000;
+    border-top: 1px solid white;
     padding: 5px
 }
 
@@ -280,6 +281,10 @@ td.tablaEgysegnev {
     max-width: 780px;
     text-align: left;
     font-size: 18px;
+}
+
+.empty {
+    margin: 40px;
 }
 
 .BackToTop {
