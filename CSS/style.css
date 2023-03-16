@@ -20,7 +20,6 @@ thead,
 tr,
 th,
 td,
-article,
 footer,
 header,
 menu,
@@ -66,17 +65,6 @@ html {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin: auto;
     border: none;
-}
-
-article {
-    border-bottom: 2px dotted #999;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-article h2 {
-    font-weight: normal;
-    margin-bottom: 12px;
 }
 
 footer {
@@ -128,7 +116,7 @@ nav ul {
 }
 
 .navbar {
-    background: rgba(20,36,51,.8) linear-gradient(0deg,rgba(20,61,102,.2),rgba(20,61,102,0) 50%);
+    background: rgba(20, 36, 51, .8) linear-gradient(0deg, rgba(20, 61, 102, .2), rgba(20, 61, 102, 0) 50%);
     width: 100%;
     overflow: auto;
     /* Set the navbar to fixed position */
@@ -141,24 +129,24 @@ nav ul {
 .navbar a {
     float: left;
     color: white;
+    border-bottom: 1px solid white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-decoration: none;
-    padding:12px 0px 12px;
-    /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    padding: 12px 0px 12px;
     width: 20%;
-    /* If you want the text to be centered */
     text-align: center;
 
 }
 
 /* Navigatin menu, Add a background color on mouse-over */
 .navbar a:hover {
-    background-color: #000;
+    background-color: rgba(55, 99, 140, 0.8);
+
 }
 
 /* Navigatin menu, Style the current/active link */
 .navbar a.active {
-    background-color: rgba(153,102,0,.6);
+    background-color: rgba(153, 102, 0, .6);
 }
 
 /* Főoldal */
@@ -238,12 +226,63 @@ td.tablaEgysegnev {
 
 /* Regisztráció */
 
+.Register {
+    background: #1c1e26;
+}
+
+.RegisterLoginBody {
+    background: #1c1e26;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.Home {
+    color: white;
+    background-color: #023d80;
+    border-radius: 20%;
+    text-align: left;
+    margin-left: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
 
 
 /* Bejelentkezés */
 
+.Login {
+    background: #1c1e26;
+}
 
+.RegisterLoginBody a:hover {
+    background-color: #024fa7;
+    border-radius: 20%;
+}
 
+.Logo {
+    display: block;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LoginLink {
+    color: #0059bf;
+    border-radius: 5px;
+    text-align: left;
+    margin-top: 30px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.RegisterLoginBody input {
+    margin-bottom: 10px;
+}
+
+.RegisterLoginBody form {
+    text-align: center;
+    margin-top: 10%;
+}
 
 /* Lore oldal */
 
