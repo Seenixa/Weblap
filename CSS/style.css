@@ -302,6 +302,8 @@ td.tablaEgysegnev {
 
 .submit {
     margin-right: 20px;
+    width: 150px;
+    text-align: center;
 }
 
 .submit:hover{
