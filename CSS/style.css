@@ -215,47 +215,51 @@ table {
 }
 
 td {
-    /*formázás könnyebbítő*/
     border-top: 1px solid white;
-    padding: 5px
+    padding: 20px;
+    vertical-align: middle;
 }
 
 td.tablaEgysegnev {
     text-align: center;
 }
 
-/* Regisztráció */
+/* Regisztráció, Bejelentkezés */
 
-.Register {
-    background: #1c1e26;
+.RegisterLogin {
+    background-image: url("../Images/Starcraft.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
+
 .RegisterLoginBody {
-    background: #1c1e26;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-image: url("../Images/wallpapers/Zeratul\ 1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .Home {
+    display:block;
+    width: 60px;
     color: white;
-    background-color: #023d80;
+    background-color: #012651;
     border-radius: 20%;
-    text-align: left;
+    text-align: center;
     margin-left: 20px;
     padding: 10px;
     text-decoration: none;
 }
 
-
-/* Bejelentkezés */
-
-.Login {
-    background: #1c1e26;
-}
-
 .RegisterLoginBody a:hover {
     background-color: #024fa7;
-    border-radius: 20%;
+    border-radius: 5px;
 }
 
 .Logo {
@@ -267,7 +271,9 @@ td.tablaEgysegnev {
 }
 
 .LoginLink {
-    color: #0059bf;
+    color: white;
+    background-color: #012651;
+    padding: 10px;
     border-radius: 5px;
     text-align: left;
     margin-top: 30px;
@@ -275,13 +281,22 @@ td.tablaEgysegnev {
     text-decoration: none;
 }
 
-.RegisterLoginBody input {
-    margin-bottom: 10px;
-}
-
 .RegisterLoginBody form {
     text-align: center;
     margin-top: 10%;
+}
+
+.RegisterLoginBody input {
+    background: #1c1e26;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.RegisterLoginBody input:active {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 /* Lore oldal */
