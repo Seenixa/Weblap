@@ -408,12 +408,25 @@ td.tablaEgysegnev {
 
 }
 
+.RegisterLoginBody .select{
+    margin-bottom: 10px;
+}
+
 .submit {
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 10px;
     width: 150px;
     text-align: center;
+}
+
+.RegisterLoginBody fieldset{
+    max-width: 480px;
+    margin: auto;
+}
+
+.RegisterLoginBody legend{
+    text-align: left;
 }
 
 
