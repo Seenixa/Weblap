@@ -313,13 +313,21 @@ td.tablaEgysegnev {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+=======
+
+.RegisterLogin {
+    background-image: url("../Images/Starcraft.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 
 .RegisterLoginBody {
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background-image: url("../Images/wallpapers/Zeratul1.jpg");
+    background-image: url("../Images/wallpapers/Zeratul\ 1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -327,7 +335,7 @@ td.tablaEgysegnev {
 }
 
 .Home {
-    display: block;
+    display:block;
     width: 60px;
     color: white;
     background-color: #012651;
@@ -384,21 +392,6 @@ td.tablaEgysegnev {
     margin-right: 20px;
     width: 150px;
     text-align: center;
-}
-
-.submit:hover {
-    background: #404456;
-}
-
-.select {
-    background: #1c1e26;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    width: 100px;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    margin-right: 20px;
-
 }
 
 
