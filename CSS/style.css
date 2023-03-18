@@ -60,7 +60,7 @@ html {
     background-color: #002650;
 }
 
-#pageContent {
+#pageContent, .MainPageContent {
     max-width: 1000px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin: auto;
@@ -82,32 +82,16 @@ footer p {
 
 /* Globális */
 
-body>section {
+body > section, .MainPageContent {
     max-width: 1000px;
     margin: auto;
     padding: 30px;
-    border-bottom: 1px solid #999;
     color: #ffffff;
 }
 
 body,
 html {
     height: 100%;
-}
-
-/*főoldal háttérehez tartozik*/
-.bg {
-    /* The image used */
-    background-image: url("../Images/Starcraft.jpeg");
-    font-size: 80px;
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* Style the navigation menu */
@@ -135,7 +119,6 @@ nav ul {
     padding: 12px 0px 12px;
     width: 20%;
     text-align: center;
-
 }
 
 /* Navigatin menu, Add a background color on mouse-over */
@@ -150,21 +133,109 @@ nav ul {
 }
 
 /* Főoldal */
+.MainPageContent {
+    padding-top: 100px;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.MainPageContent article {
+    text-align: center;
+}
+
+.MainPageContent h1 {
+    font-size: 55px;
+    padding-bottom: 35px;
+}
+
+.MainPageContent h2 {
+    font-size: 40px;
+}
+
+.MainPageContent p {
+    font-size: 30px;
+}
+
+.WoL {
+    /* The image used */
+    background-image: url("../Images/wallpapers/JimRaynor.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: WoLHatteranimacio;
+    animation-duration: 9s;
+}
+
+.HotS {
+    background-image: url("../Images/wallpapers/Kerrigan1.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: HotSHatteranimacio;
+    animation-duration: 7s;
+    animation-delay: 9s;
+}
+
+.LotV {
+
+    background-image: url("../Images/wallpapers/Zeratul1.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: LotVHatteranimacio;
+    animation-duration: 7s;
+    animation-delay: 16s;
+}
+
+@keyframes WoLHatteranimacio {
+    from {
+        background-image: url("../Images/wallpapers/JimRaynor.jpg");
+    }
+    50% {
+        background-image: url("../Images/wallpapers/Battleship.jpg");
+    }
+    to {
+        background-image: url("../Images/wallpapers/JimRaynor.jpg");
+    }
+}
+
+@keyframes HotSHatteranimacio {
+    from {
+        background-image: url("../Images/wallpapers/Kerrigan1.jpg");
+    }
+    50% {
+        background-image: url("../Images/wallpapers/Zerg2.jpg");
+    }
+    to {
+        background-image: url("../Images/wallpapers/Kerrigan1.jpg");
+    }
+}
+
+@keyframes LotVHatteranimacio {
+    from {
+        background-image: url("../Images/wallpapers/Zeratul1.jpg");
+    }
+    50% {
+        background-image: url("../Images/wallpapers/Protoss.jpg");
+    }
+    to {
+        background-image: url("../Images/wallpapers/Zeratul1.jpg");
+    }
+}
 
 .dropbtn {
-    background-color: #04AA6D;
+    background-color: rgba(20, 36, 51, .8);
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
-}
-
-.dropdown-content {
-    display: none;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    cursor: pointer;
 }
 
 .dropdown {
@@ -172,15 +243,25 @@ nav ul {
     display: inline-block;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(20, 36, 51, .8);
+    min-width: 160px;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: rgba(20, 61, 102, .2)
 }
 
 .dropdown:hover .dropdown-content {
@@ -188,7 +269,7 @@ nav ul {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: rgba(153, 102, 0, .6);
 }
 
 /*Races oldalakra vonatkozó*/
@@ -207,7 +288,6 @@ img.unit {
 }
 
 table {
-    /*formázás könnyebbítő*/
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
     border-collapse: collapse;
@@ -226,6 +306,14 @@ td.tablaEgysegnev {
 }
 
 /* Regisztráció, Bejelentkezés */
+
+.RegisterLogin {
+    background-image: url("../Images/Starcraft.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+=======
 
 .RegisterLogin {
     background-image: url("../Images/Starcraft.jpeg");
@@ -304,21 +392,6 @@ td.tablaEgysegnev {
     margin-right: 20px;
     width: 150px;
     text-align: center;
-}
-
-.submit:hover{
-    background: #404456;
-}
-
-.select{
-    background: #1c1e26;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    width: 100px;
-    margin-top: 0px;
-    margin-bottom: 30px;
-    margin-right: 20px;
-
 }
 
 
