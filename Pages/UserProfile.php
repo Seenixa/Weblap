@@ -17,7 +17,11 @@
 
     </header>
     <?php
+        include_once "../Classes/User.php";
+        include_once "../Functions/SaveLoad.php";
+        include_once "Login.php";
 
+        
     ?>
     <footer>
 

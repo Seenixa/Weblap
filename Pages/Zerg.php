@@ -14,15 +14,9 @@
 
 <body>
   <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Főoldal</a></li>
-        <li><a href="Terran.html">Terran</a></li>
-        <li><a class="active" href="Zerg.html">Zerg</a></li>
-        <li><a href="Protoss.html">Protoss</a></li>
-        <li><a href="Lore.html">Történelem</a></li>
-      </ul>
-    </nav>
+    <?php
+    $activePage = "Zerg";
+    include "../Parts/Header.php" ?>
   </header>
   <section id="pageContent">
     <h1>
@@ -61,7 +55,7 @@
     <tr>
       <td>
         <a target="_blank" href="../Images/units/1._Drone_Default.jpg">
-         <img class="unit" src="../Images/units/1._Drone_Default.jpg" alt="Drone">
+          <img class="unit" src="../Images/units/1._Drone_Default.jpg" alt="Drone">
         </a>
       </td>
       <td class="tablaEgysegnev">Drone</td>
@@ -177,8 +171,10 @@
     </tr>
   </table>
   <footer>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minus itaque. At possimus dignissimos dolorem
-      eveniet quisquam laborum voluptatem labore!</p>
+    <?php
+    include "../Parts/footer.php";
+    ?>
   </footer>
 </body>
+
 </html>

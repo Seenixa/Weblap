@@ -13,7 +13,7 @@
 
 <body class="RegisterLoginBody">
   <a class="Home" href="index.html">Főoldal</a>
-  <form action="Register.php" method="post" enctype="multipart/form-data">
+  <form action="../Functions/createAccount.php" method="post" enctype="multipart/form-data">
     <label>Felhasználó Név: <br><input type="text" name="nev" value="" placeholder="Név" maxlength="20" minlength="5"
         autofocus tabindex="1" required>
     </label><br>
@@ -48,37 +48,9 @@
     <input class="submit" type="submit" value="Regisztráció">
   </form>
 
-  <?php
-  $username = "username";
-  $password = "password";
-  $email = "email";
-  $description = "description";
-  $profile = array(
-    "name" => $username,
-    "password" => $password,
-    "email" => $email,
-    "description" => $description
-  );
-
-  function save($userProfile)
-  {
-    $saveFile = fopen("../saves/profiles.txt", "w");
-    foreach ($userProfile as $userData) {
-      fwrite($saveFile, $userData);
-      fwrite($saveFile, "\n");
-    }
-    fwrite($saveFile, "next\n");
-    fclose($saveFile);
-  }
-
-  function load($userName)
-  {
-    $loadFile = fopen("../saves/profiles.txt", "r");
-
-  }
 
 
-  ?>
+
 
 </body>
 
