@@ -13,17 +13,13 @@
 </head>
 
 <body>
+
   <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Főoldal</a></li>
-        <li><a href="Terran.html">Terran</a></li>
-        <li><a href="Zerg.html">Zerg</a></li>
-        <li><a class="active" href="Protoss.html">Protoss</a></li>
-        <li><a href="Lore.html">Történelem</a></li>
-      </ul>
-    </nav>
+    <?php 
+    $activePage = "Protoss";
+    include "../Parts/Header.php" ?>
   </header>
+
   <section id="pageContent">
     <h1>
       <img class="racesH1" src="../Images/font/ProtossFont.png" alt="Protoss">
@@ -180,8 +176,9 @@
     </tr>
   </table>
   <footer>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, minus itaque. At possimus dignissimos dolorem
-      eveniet quisquam laborum voluptatem labore!</p>
+        <?php
+            include "../Parts/footer.php";
+        ?>
   </footer>
 </body>
 

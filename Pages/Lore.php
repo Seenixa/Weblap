@@ -13,15 +13,9 @@
 
 <body>
   <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Főoldal</a></li>
-        <li><a href="Terran.html">Terran</a></li>
-        <li><a href="Zerg.html">Zerg</a></li>
-        <li><a href="Protoss.html">Protoss</a></li>
-        <li><a class="active" href="Lore.html">Történelem</a></li>
-      </ul>
-    </nav>
+    <?php
+    $activePage = "Lore";
+    include "../Parts/Header.php"; ?>
   </header>
 
 
@@ -157,13 +151,14 @@
   <p class="LoreParagraph">Valerian Mengsk nyílt választásokat ír ki a Domíniumban.</p>
   <p class="LoreParagraph">Zagara uralma alá vonja a Char közelében található csillagrendszert, hogy legyen hol
     letelepednie a zergeknek.</p>
-    <div class="empty"></div>
+  <div class="empty"></div>
   <a class="BackToTop" href="#top">Vissza az oldal elejére</a>
 
-  <footer><p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ex libero aliquam
-      sapiente nulla dolorum?
-  </p></footer>
+  <footer>
+    <?php
+    include "../Parts/footer.php";
+    ?>
+  </footer>
 </body>
 
 </html>

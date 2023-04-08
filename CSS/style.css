@@ -343,6 +343,13 @@ td.tablaEgysegnev {
     height: 100%;
 }
 
+.LoggedIn{
+    text-align: center;
+    margin: 0px;
+    padding-top: 20%;
+    font-size: 25px;
+}
+
 
 .RegisterLoginBody {
     color: white;
