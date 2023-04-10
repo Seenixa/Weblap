@@ -1,3 +1,4 @@
+<!--Felhasználó profilja. Itt tudja törölni a fiókját, illetve tud módosítani néhány adatán (jelszó, kedvenc faj, profilkép) -->
 <!DOCTYPE html>
 <html lang="hu">
 

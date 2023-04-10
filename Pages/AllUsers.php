@@ -1,3 +1,4 @@
+<!--Az összes User-t kilistázva jelenítni meg. Ha admin nézi az oldalt, akkor egy fiók törlése gomb jelenik meg, amivel az admin törli a felhasználó fiókot-->
 <!DOCTYPE html>
 <html lang="hu">
 
