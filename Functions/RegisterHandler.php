@@ -21,6 +21,7 @@
         $repeatPassword = $_POST["Repeatpw"];
         $email = $_POST["email"];
         $repeatEmail = $_POST["RepeatEmail"];
+        $race = "";
         $agreement = $_POST["agreement"];
         $errors = [];
         $userBase = loadAll();
@@ -28,8 +29,8 @@
 
         // Létezik-e már a felhasználó
 
-        foreach($userbase as $user){
-            if ($user->name == $username){
+        foreach($userBase as $user){
+            if ($user["nev"] == $username){
                 $errors[] = "A felhasználónév már használatban van.";
             }
         }
@@ -37,9 +38,9 @@
         // Adott-e meg választ a kedvenc fajra regisztrációnál
 
         if(isset($_POST["race"])){
-            $race = $_POST["race"];
+          $race = $_POST["race"];
         } else {
-            $race = "none";
+          $race = "none";
         }
 
         // Ugyanazt az Jelszót címet írta-e be kétszer
@@ -63,12 +64,17 @@
         // Ha nincs hiba akkor felhasználó bevitele a mentésbe és üdvözlés, egyébként hibák kilistázása.
 
         if(count($errors) == 0){
-            $user = new User($_POST["nev"], $_POST["pw"], $_POST["email"], $_POST["race"], "default", "no");
-            addUser($user);
-            echo "<div class=RegisterLoginReact>Sikeres regisztráció!<br>Üdvözlünk a weboldalon $user->name!</div>";
+          //jelszó titkosítás
+          $password = password_hash($password, PASSWORD_DEFAULT);
+          //A felhasználó adatai egy "kulcs=>érték" típusú tömben tárolódik
+          $userBase [] = ["nev" => $username, "pw" => $password, "email" => $email, "race" => $race];
+          //és a fáljbaírás is így (kulcs=>érték) történik
+          saveAll($userBase);
+          //header("Location: login.php");
+          echo "<div class=RegisterLoginReact>Sikeres regisztráció!<br>Üdvözlünk a weboldalon $username!</div>";
         } else {
             foreach ($errors as $error){
-                echo "<div class=RegisterLoginReact>$error<br></div>";
+              echo "<div class=RegisterLoginReact>$error<br></div>";
             }
         }
             
