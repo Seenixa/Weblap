@@ -12,8 +12,8 @@
 </head>
 
 <body class="RegisterLoginBody">
-  <a class="Home" href="index.html">Főoldal</a>
-  <form action="../Functions/createAccount.php" method="post" enctype="multipart/form-data">
+  <a class="Home" href="Index.php">Főoldal</a>
+  <form action="../Functions/RegisterHandler.php" method="post">
     <label>Felhasználó Név: <br><input type="text" name="nev" value="" placeholder="Név" maxlength="20" minlength="5"
         autofocus tabindex="1" required>
     </label><br>
@@ -33,7 +33,7 @@
     </fieldset>
 
     <p> Melyik faj tetszik eddig a legjobban? </p>
-    <select class="select" name="race">
+    <select class="select" name="race" tabindex="6">
       <option selected disabled>Válassz</option>
       <option value="Terran">Terran</option>
       <option value="Zerg">Zerg</option>
@@ -41,11 +41,11 @@
     </select><br>
 
     <label class="registerCheck" for="checkbox1">Elfogadom a felhasználási feltételeket. </label>
-    <input type="checkbox" id="checkbox1" name="agreement" value="agree"> <br>
+    <input type="checkbox" id="checkbox1" name="agreement" value="agree" tabindex="7" required> <br>
 
 
     <input class="submit" type="reset" value="Újratöltés">
-    <input class="submit" type="submit" value="Regisztráció">
+    <input class="submit" type="submit" name="register" value="Regisztráció">
   </form>
 
 
