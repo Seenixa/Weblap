@@ -1,53 +1,77 @@
 <?php
-class User{
+class User
+{
     public $name;
     private $password;
     public $email;
     public $favouriteRace;
     public $profilePicture;
+    public $isAdmin;
 
-    function __construct($name, $password, $email, $favouriteRace){
+    function __construct($name, $password, $email, $favouriteRace, $profilePicture, $isAdmin)
+    {
         $this->name = $name;
         $this->password = $password;
         $this->email = $email;
         $this->favouriteRace = $favouriteRace;
+        $this->profilePicture = $profilePicture;
+        $this->isAdmin = $isAdmin;
     }
 
-    function setName($name){
+    function setName($name)
+    {
         $this->name = $name;
     }
 
-    function getName(){
+    function getName()
+    {
         return $this->name;
     }
-    function setPassword($password){
+    function setPassword($password)
+    {
         $this->password = $password;
     }
 
-    function getPassword(){
+    function getPassword()
+    {
         return $this->password;
     }
-    function setEmail($email){
+    function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    function getEmail(){
+    function getEmail()
+    {
         return $this->email;
     }
-    function setFavouriteRace($favouriteRace){
+    function setFavouriteRace($favouriteRace)
+    {
         $this->favouriteRace = $favouriteRace;
     }
 
-    function getFavouriteRace(){
+    function getFavouriteRace()
+    {
         return $this->favouriteRace;
     }
-    function setProfilePicture($profilePicture){
+    function setProfilePicture($profilePicture)
+    {
         $this->profilePicture = $profilePicture;
     }
 
-    function getProfilePicture(){
+    function getProfilePicture()
+    {
         return $this->profilePicture;
     }
+    function getIsAdmin()
+    {
+        return $this->isAdmin;
+    }
+    function setIsAdmin()
+    {
+        return $this->isAdmin;
+    }
+
 }
 
 ?>

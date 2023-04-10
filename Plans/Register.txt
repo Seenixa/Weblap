@@ -1,8 +1,0 @@
-Page 5: 
-    Register:
-        Input field:    Username
-        Input field:    E-mail address
-        Input field:    Confirm-Email address
-        Input field:    Password
-        Input field:    Confirm-Password
-            

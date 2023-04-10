@@ -17,7 +17,7 @@
 
         <?php
     //    include_once "../Classes/User.php";                                           
-    //    include_once "../Functions/Functions.php";
+    //    include_once "../Functions/SaveLoad.php";
     //    $user = new User("Balázs", "mittomen", "asgf@gmail.com", "Protoss");      ## Teszt: felhasználó kreálás.
     //    save($user);                                                              ## Teszt: Mentés
     //    unlink("../Saves/Balázs.txt");                                            ## Teszt: Törlés

@@ -20,8 +20,10 @@
         include_once "../Classes/User.php";
         include_once "../Functions/SaveLoad.php";
         include_once "Login.php";
+        $loggedInUser = new User("Admin", "admin", "", "");
+        if($loggedInUser->$getName()){
 
-        
+        }
     ?>
     <footer>
 

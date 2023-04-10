@@ -327,26 +327,27 @@ td.tablaEgysegnev {
 
 /* Regisztráció, Bejelentkezés */
 
-.RegisterLogin {
-    background-image: url("../Images/Starcraft.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+.RegisterLogin {                                                                            /* ?? */       
+    background-image: url("../Images/Starcraft.jpeg");                                      /* ?? */
+    background-position: center;                                                            /* ?? */
+    background-repeat: no-repeat;                                                           /* ?? */
+    background-size: cover;                                                                 /* ?? */
+    height: 100%;                                                                           /* ?? */
 }
 
+
 .RegisterLogin {
-    background-image: url("../Images/Starcraft.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+    background-image: url("../Images/Starcraft.jpeg");                                      /* ?? */
+    background-position: center;                                                            /* ?? */
+    background-repeat: no-repeat;                                                           /* ?? */
+    background-size: cover;                                                                 /* ?? */
+    height: 100%;                                                                           /* ?? */
 }
 
-.LoggedIn{
+.RegisterLoginReact{
     text-align: center;
-    margin: 0px;
-    padding-top: 20%;
+    margin: 0;
+    padding-top: 30%;
     font-size: 25px;
 }
 

@@ -17,8 +17,12 @@
 
     </header>
     <?php
+    include_once "../Classes/User.php";
+
 
     ?>
+
+
     <footer>
 
     </footer>
