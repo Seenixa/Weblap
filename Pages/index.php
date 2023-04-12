@@ -16,18 +16,17 @@
     <header>
 
         <?php
-    //    include_once "../Classes/User.php";                                           
-    //    include_once "../Functions/SaveLoad.php";
-    //    $user = new User("Balázs", "mittomen", "asgf@gmail.com", "Protoss");      ## Teszt: felhasználó kreálás.
-    //    save($user);                                                              ## Teszt: Mentés
-    //    unlink("../Saves/Balázs.txt");                                            ## Teszt: Törlés
-    
+        session_start();
         $activePage = "Index";
         include "../Parts/Header.php";
-            ?>
+        ?>
     </header>
 
     <div class="empty"></div>
+    <?php if (isset($_SESSION["user"])) {
+        echo "<div><br><br><a href=../Functions/logout.php> Kijelentkezés</a></div>";
+    }
+    ?>
 
     <div class="WoL">
         <section class="MainPageContent">
@@ -75,7 +74,7 @@
     </div>
     <footer>
         <?php
-            include "../Parts/footer.php";
+        include "../Parts/footer.php";
         ?>
     </footer>
 </body>

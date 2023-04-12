@@ -6,16 +6,16 @@ class User
     public $email;
     public $favouriteRace;
     public $profilePicture;
-    public $isAdmin;
+    public $priviledge;
 
-    function __construct($name, $password, $email, $favouriteRace, $profilePicture, $isAdmin)
+    function __construct($name, $password, $email, $favouriteRace, $profilePicture, $priviledge)
     {
         $this->name = $name;
         $this->password = $password;
         $this->email = $email;
         $this->favouriteRace = $favouriteRace;
         $this->profilePicture = $profilePicture;
-        $this->isAdmin = $isAdmin;
+        $this->priviledge = $priviledge;
     }
 
     function setName($name)
@@ -63,13 +63,13 @@ class User
     {
         return $this->profilePicture;
     }
-    function getIsAdmin()
+    function getpriviledge($priviledge)
     {
-        return $this->isAdmin;
+        return $this->priviledge;
     }
-    function setIsAdmin()
+    function setpriviledge($priviledge)
     {
-        return $this->isAdmin;
+        $this->priviledge = $priviledge;
     }
 
 }

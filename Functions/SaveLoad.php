@@ -1,21 +1,6 @@
 <?php
 include_once "../Classes/User.php";
 
-// Beír egy sor felhasználó adatot a Userbase.txt fileba
-
-/*function addUser($user)
-{
-    $saveFile = fopen("../Saves/Userbase.txt", "a");
-    fwrite($saveFile, $user->getName() . " ");
-    fwrite($saveFile, $user->getPassword() . " ");
-    fwrite($saveFile, $user->getEmail() . " ");
-    fwrite($saveFile, $user->getFavouriteRace() . " ");
-    fwrite($saveFile, $user->getProfilePicture() . " ");
-    fwrite($saveFile, $user->getIsAdmin());
-    fwrite($saveFile, "\n");
-    fclose($saveFile);
-}*/
-
 // Beolvassa az összes felhasználót egy arraybe, kikeresi a bemenetére kapott felhasználó felhasználónevét, kitörli az arrayből, majd teljes mentést csinál a törölt elem nélkül
 
 function deleteUser($user)
@@ -41,15 +26,6 @@ function saveAll($users)
     foreach ($users as $user) {
         $serialized_user = serialize($user);
         fwrite($saveFile, $serialized_user . "\n");
-
-        /*fwrite($saveFile, $user->getName() . " ");
-        fwrite($saveFile, $user->getPassword() . " ");
-        fwrite($saveFile, $user->getEmail() . " ");
-        fwrite($saveFile, $user->getFavouriteRace() . " ");
-        fwrite($saveFile, $user->getProfilePicture() . " ");
-        fwrite($saveFile, $user->getIsAdmin());
-        fwrite($saveFile, "\n");*/
-
     }
     fclose($saveFile);
 }
@@ -70,18 +46,19 @@ function loadAll()
     }
     fclose($saveFile);
     return $users;
-    /*$saveFile = fopen("../Saves/Userbase.txt", "r");
-    while ($user = fgets($saveFile) != false) {
-        $split = explode(" ", $user);
-        $users[] = new User($split[0], $split[1], $split[2], $split[3], $split[4], $split[5]);
-    }
-    return $users;*/
 }
 
-// Placeholder
+// Arrayt ír át 'User' classá.
 
-function loadIn($user){
-
+function loadIn($user)
+{
+    $username = $user["nev"];
+    $password = $user["pw"];
+    $email = $user["email"];
+    $race = $user["race"];
+    $profilePicture = $user["profpic"];
+    $priviledge = $user["priviledge"];
+    return new User($username, $password, $email, $race, $profilePicture, $priviledge);
 }
 
 ?>
