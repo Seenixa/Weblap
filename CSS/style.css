@@ -60,7 +60,8 @@ html {
     background-color: #002650;
 }
 
-#pageContent, .MainPageContent {
+#pageContent,
+.MainPageContent {
     max-width: 1000px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin: auto;
@@ -102,7 +103,8 @@ footer p {
 
 /* Globális */
 
-body > section, .MainPageContent {
+body>section,
+.MainPageContent {
     max-width: 1000px;
     margin: auto;
     padding: 30px;
@@ -217,9 +219,11 @@ nav ul {
     from {
         background-image: url("../Images/wallpapers/JimRaynor.jpg");
     }
+
     50% {
         background-image: url("../Images/wallpapers/Battleship.jpg");
     }
+
     to {
         background-image: url("../Images/wallpapers/JimRaynor.jpg");
     }
@@ -229,9 +233,11 @@ nav ul {
     from {
         background-image: url("../Images/wallpapers/Kerrigan1.jpg");
     }
+
     50% {
         background-image: url("../Images/wallpapers/Zerg2.jpg");
     }
+
     to {
         background-image: url("../Images/wallpapers/Kerrigan1.jpg");
     }
@@ -241,9 +247,11 @@ nav ul {
     from {
         background-image: url("../Images/wallpapers/Zeratul1.jpg");
     }
+
     50% {
         background-image: url("../Images/wallpapers/Protoss.jpg");
     }
+
     to {
         background-image: url("../Images/wallpapers/Zeratul1.jpg");
     }
@@ -327,27 +335,15 @@ td.tablaEgysegnev {
 
 /* Regisztráció, Bejelentkezés */
 
-.RegisterLogin {                                                                            /* ?? */       
-    background-image: url("../Images/Starcraft.jpeg");                                      /* ?? */
-    background-position: center;                                                            /* ?? */
-    background-repeat: no-repeat;                                                           /* ?? */
-    background-size: cover;                                                                 /* ?? */
-    height: 100%;                                                                           /* ?? */
-}
-
-
-.RegisterLogin {
-    background-image: url("../Images/Starcraft.jpeg");                                      /* ?? */
-    background-position: center;                                                            /* ?? */
-    background-repeat: no-repeat;                                                           /* ?? */
-    background-size: cover;                                                                 /* ?? */
-    height: 100%;                                                                           /* ?? */
-}
-
-.RegisterLoginReact{
+.RegisterLoginReactFirst {
     text-align: center;
-    margin: 0;
-    padding-top: 30%;
+    padding-top: 15%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.RegisterLoginReact {
+    text-align: center;
     font-size: 25px;
 }
 
@@ -363,7 +359,7 @@ td.tablaEgysegnev {
 }
 
 .Home {
-    display:block;
+    display: block;
     width: 60px;
     color: white;
     background-color: #012651;
@@ -416,7 +412,7 @@ td.tablaEgysegnev {
 
 }
 
-.RegisterLoginBody .select{
+.RegisterLoginBody .select {
     margin-bottom: 10px;
 }
 
@@ -428,12 +424,12 @@ td.tablaEgysegnev {
     text-align: center;
 }
 
-.RegisterLoginBody fieldset{
+.RegisterLoginBody fieldset {
     max-width: 480px;
     margin: auto;
 }
 
-.RegisterLoginBody legend{
+.RegisterLoginBody legend {
     text-align: left;
 }
 

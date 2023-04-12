@@ -1,4 +1,4 @@
-<!--Felhasználó profilja. Itt tudja törölni a fiókját, illetve tud módosítani néhány adatán (jelszó, kedvenc faj, profilkép) -->
+<!-- Adott felhasználó profilja. Kiírja a felhasználó nevét, e-mail címét, kedvenc faját és megjeleníti a profilképét. -->
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -18,16 +18,23 @@
 
     </header>
     <?php
-        include_once "../Classes/User.php";
-        include_once "../Functions/SaveLoad.php";
-        include_once "Login.php";
-        $loggedInUser = new User("Admin", "admin", "", "");
-        if($loggedInUser->$getName()){
-
-        }
+    session_start();
+    include_once "../Classes/User.php";
+    include_once "../Functions/SaveLoad.php";
+    $username = $_SESSION["userProfile"]->getName();
+    $password = $_SESSION["userProfile"]->getPassword();
+    $email = $_SESSION["userProfile"]->getEmail();
+    $race = $_SESSION["userProfile"]->getRace();
+    $profilePicture = $_SESSION["userProfile"]->getProfilePicture();
+    $priviledge = $_SESSION["userProfile"]->getpriviledge();
     ?>
-    <footer>
 
+    echo "<img src=$profilePicture alt=Profile picture>";
+    echo "$username<br>";
+    echo "$race";
+
+
+    <footer>
     </footer>
 </body>
 
