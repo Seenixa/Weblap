@@ -18,50 +18,62 @@
     <?php
     session_start();
     include_once "../Classes/User.php";
-    $username = $_SESSION["user"]->getName();
-    $password = $_SESSION["user"]->getPassword();
-    $email = $_SESSION["user"]->getEmail();
-    $race = $_SESSION["user"]->getRace();
-    $profilePicture = $_SESSION["user"]->getProfilePicture();
-    $priviledge = $_SESSION["user"]->getpriviledge();
+    include_once "../Functions/SaveLoad.php";
+    if (isset($_SESSION["user"])) {
+        $currentUser = loadIn($_SESSION["user"]);
+        $username = $currentUser->getName();
+        $password = $currentUser->getPassword();
+        $email = $currentUser->getEmail();
+        $race = $currentUser->getFavouriteRace();
+        $profilePicture = $currentUser->getProfilePicture();
+        $priviledge = $currentUser->getpriviledge();
+
+    }
     ?>
     <?php
-    echo "<img src=$profilePicture alt=Profile picture>";
+    echo "<a target=_blank href=$profilePicture>
+    <img class=unit src=$profilePicture alt=Profile Picture> </a>";
     ?>
     <form action="../FormHandlers/NewRace.php" method="POST">
-        Kedvenc faj:
-        <select class=select name="race">
-            <option selected disabled>Válassz</option>
-            <option value="Terran">Terran</option>
-            <option value="Zerg">Zerg</option>
-            <option value="Protoss">Protoss</option>
-            <input type="submit" name="racechange" value="Mentés">
-        </select><br>">
+        <h2>Kedvenc faj:</h2>
+        <fieldset>
+
+            <select class=select name="race">
+                <option selected disabled>Válassz</option>
+                <option value="Terran">Terran</option>
+                <option value="Zerg">Zerg</option>
+                <option value="Protoss">Protoss</option>
+            </select><br>
+            <br><input type="submit" name="racechange" value="Mentés"><br>
+        </fieldset>
     </form>
     <form action="../FormHandlers/NewPassword.php" method="POST">
-        Jelszó változtatás: <br>
-        Jelenlegi jelszó: <input type="text" name="currentpw" placeholder="Jelenlegi jelszó">
-        Új jelszó: <input type="text" name="pw" placeholder="Új jelszó">
-        Új jelszó mégegyszer: <input type="text" name="repeatpw" placeholder="Új jelszó újra">
-        <input type="submit" name="pwchange" value="Jelszó megváltoztatása">
+        <h2>Jelszó változtatás:</h2>
+        <fieldset>
+            Jelenlegi jelszó: <br><input type="password" name="currentpw" placeholder="Jelenlegi jelszó"><br>
+            Új jelszó: <br><input type="password" name="pw" placeholder="Új jelszó"><br>
+            Új jelszó mégegyszer: <br><input type="password" name="repeatpw" placeholder="Új jelszó újra"><br><br>
+            <input type="submit" name="pwchange" value="Jelszó megváltoztatása"><br>
+        </fieldset>
     </form>
     <form action="../FormHandlers/NewEmail.php" method="POST">
-        E-mail cím változtatás: <br>
-        Új e-mail: <input type="text" name="email" placeholder="Új e-mail cím">
-        Új e-mail mégegyszer: <input type="text" name="repeatemail" placeholder="Új e-mail cím újra">
-        <input type="submit" name="emailchange" value="E-mail cím megváltoztatása">
+        <h2>E-mail cím változtatás:</h2>
+        <fieldset>
+            Új e-mail: <br><input type="email" name="email" placeholder="Új e-mail cím"><br>
+            Új e-mail mégegyszer: <br><input type="email" name="repeatemail" placeholder="Új e-mail cím újra"><br><br>
+            <input type="submit" name="emailchange" value="E-mail cím megváltoztatása"><br>
+        </fieldset>
     </form>
     <form action="../FormHandlers/DeleteAccount.php" method="POST">
-        Felhasználói fiók törlése: <br>
-        A törlés megerősítéséhez írja be a jelszavát: <input type="text" name="pw" placeholder="Jelszó">
-        A törlés megerősítéséhez írja be a jelszavát mégegyszer: <input type="text" name="repeatpw"
-            placeholder="Jelszó">
-        <input type="submit" name="deleteaccount" value="Felhasználói fiók törlése">
+        <h2>Felhasználói fiók törlése:</h2>
+        <fieldset>
+            A törlés megerősítéséhez írja be a jelszavát: <br><input type="password" name="pw" placeholder="Jelszó"><br>
+            A törlés megerősítéséhez írja be a jelszavát mégegyszer: <br><input type="password" name="repeatpw"
+                placeholder="Jelszó"><br><br>
+            <input type="submit" name="deleteaccount" value="Felhasználói fiók törlése">
+        </fieldset>
     </form>
-
-
     <footer>
-
     </footer>
 </body>
 

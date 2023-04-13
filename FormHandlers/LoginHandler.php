@@ -35,7 +35,7 @@
             foreach ($userBase as $registeredUser) {
                 if ($registeredUser["nev"] == $userName && password_verify($userPassword, $registeredUser["pw"])) {
                     $message = "Sikeres belépés!<br>" . "<br><a class=LoginLink href=../pages/index.php>Vissza a főoldalra</a>";
-                    $_SESSION["user"] = loadIn($registeredUser);
+                    $_SESSION["user"] = $registeredUser;
                 }
             }
         }
