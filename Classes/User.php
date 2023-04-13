@@ -29,7 +29,12 @@ class User
     }
     function setPassword($password)
     {
-        $this->password = $password;
+        if (strlen($password) > 5 && strlen($password) < 20) {
+            $this->password = $password;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function getPassword()
@@ -38,7 +43,12 @@ class User
     }
     function setEmail($email)
     {
-        $this->email = $email;
+        if (str_contains($email, "@") && str_contains($email, ".")) {
+            $this->email = $email;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function getEmail()
@@ -47,7 +57,12 @@ class User
     }
     function setFavouriteRace($favouriteRace)
     {
-        $this->favouriteRace = $favouriteRace;
+        if ($favouriteRace == "Protoss" || $favouriteRace == "Zerg" || $favouriteRace == "Terran") {
+            $this->favouriteRace = $favouriteRace;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function getFavouriteRace()
@@ -63,7 +78,7 @@ class User
     {
         return $this->profilePicture;
     }
-    function getpriviledge($priviledge)
+    function getpriviledge()
     {
         return $this->priviledge;
     }

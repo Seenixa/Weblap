@@ -24,7 +24,7 @@
     $repeatEmail = $_POST["RepeatEmail"];
     $race = "";
     $agreement = $_POST["agreement"];
-    $profilePicture = "../images=SClogo.png";
+    $profilePicture = "../images/SClogo.png";
     $priviledge = 0;
     $errors = [];
     $userBase = loadAll();
