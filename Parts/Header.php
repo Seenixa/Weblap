@@ -26,12 +26,32 @@
             default:
                 break;
         }
-
-        echo "<li><a $indexActive href=index.php>Főoldal</a></li>";
-        echo "<li><a $terranActive href=terran.php>Terran</a></li>";
-        echo "<li><a $zergActive href=zerg.php>Zerg</a></li>";
-        echo "<li><a $protossActive href=protoss.php>Protoss</a></li>";
-        echo "<li><a $loreActive href=lore.php>Történelem</a></li>";
         ?>
+
+        <li><a <?php echo $indexActive ?> href=../Pages/index.php>Főoldal</a></li>
+        <div class="subnav">
+            <button class="subnavbtn">Tartalom &#9660;</button>
+            <div class="subnav-content">
+                <a <?php echo $terranActive ?> href=../Pages/Terran.php>Terran</a>
+                <a <?php echo $zergActive ?> href=../Pages/Zerg.php>Zerg</a>
+                <a <?php echo $protossActive ?> href=../Pages/Protoss.php>Protoss</a>
+                <a <?php echo $loreActive ?> href=../Pages/Lore.php>Történelem</a>
+            </div>
+        </div>
+        <?php if (isset($_SESSION["user"])) {?>
+        <div class="subnav">
+            <button class="subnavbtn">Fiók kezelés &#9660;</button>
+            <div class="subnav-content">
+                <a <?php echo $terranActive ?> href=../Pages/UserProfile.php>Profilom</a>
+                <a <?php echo $zergActive ?> href=../Pages/AllUsers.php>Összes profil</a>
+                <a <?php echo $protossActive ?> href=../Pages/AccountManagement.php>Profilom módosítása</a>
+            </div>
+        </div>
+        <li><a href=../Functions/Logout.php>Kijelentkezés</a></li>
+        <?php } else {  ?>
+        <li><a <?php /*echo*/ ?> href=../Pages/Login.php>Bejelentkezés</a></li>
+        <li><a <?php /*echo*/ ?> href=../Pages/Register.php>Regisztráció</a></li>
+        <?php } ?>
+
     </ul>
 </nav>
