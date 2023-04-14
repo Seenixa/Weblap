@@ -15,7 +15,8 @@
 <body>
 
   <header>
-    <?php 
+    <?php
+    session_start();
     $activePage = "Protoss";
     include "../Parts/Header.php" ?>
   </header>

@@ -1,5 +1,10 @@
 <!--Felhasználó profilja. Itt tudja törölni a fiókját, illetve tud módosítani néhány adatán (jelszó, kedvenc faj, profilkép) -->
-
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -17,6 +22,7 @@
 <body>
     <?php
     session_start();
+    $activePage = "AccountManagement";
     include_once "../Classes/User.php";
     include_once "../Functions/SaveLoad.php";
     if (isset($_SESSION["user"])) {

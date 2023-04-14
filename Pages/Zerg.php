@@ -15,6 +15,7 @@
 <body>
   <header>
     <?php
+    session_start();
     $activePage = "Zerg";
     include "../Parts/Header.php" ?>
   </header>

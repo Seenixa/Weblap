@@ -12,7 +12,7 @@
 </head>
 
 <body class="RegisterLoginBody">
-  <a class="Home" href="Index.php">Főoldal</a>
+  <a class="Home" href="../Pages/index.php">Főoldal</a>
   <form action="../FormHandlers/RegisterHandler.php" method="post">
     <label>Felhasználó Név: <br><input type="text" name="nev" value="" placeholder="Név" maxlength="20" minlength="5"
         autofocus tabindex="1" required>

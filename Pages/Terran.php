@@ -16,6 +16,7 @@
   <header>
 
     <?php
+    session_start();
     $activePage = "Terran";
     include "../Parts/Header.php" ?>
 
