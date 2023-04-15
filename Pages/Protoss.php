@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -16,7 +19,6 @@
 
   <header>
     <?php
-    session_start();
     $activePage = "Protoss";
     include "../Parts/Header.php" ?>
   </header>

@@ -1,3 +1,2 @@
-a:6:{s:3:"nev";s:7:"Seenixa";s:2:"pw";s:60:"$2y$10$WElpQWRkKr/Na3MOWmQhH.bGAMiVN4bvwIvW/Uqz1SSibeN8kj9mm";s:5:"email";s:18:"nepatomi@gmail.com";s:4:"race";s:4:"Zerg";s:7:"profpic";s:20:"../images/SClogo.png";s:10:"priviledge";i:0;}
 a:6:{s:3:"nev";s:5:"Gyuri";s:2:"pw";s:60:"$2y$10$pvXzQUXqnvF6Gp/5KbMkGOEya6vtDYI6VsNEnfRJvtfHrkoshQ.Oe";s:5:"email";s:14:"alma@korte.com";s:4:"race";s:7:"Protoss";s:7:"profpic";s:20:"../images/SClogo.png";s:10:"priviledge";i:0;}
 a:6:{s:3:"nev";s:6:"Péter";s:2:"pw";s:60:"$2y$10$Ly2iU3te62uwbLEL3mR/ve/Pd1t7vYVqAbgrWnnzXQGDGOUuClwtm";s:5:"email";s:14:"alma@korte.com";s:4:"race";s:6:"Terran";s:7:"profpic";s:20:"../images/SClogo.png";s:10:"priviledge";i:1;}

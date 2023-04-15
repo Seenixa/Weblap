@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -16,7 +19,7 @@
     <header>
 
         <?php
-        session_start();
+        
         $activePage = "Index";
         include "../Parts/Header.php";
         include "../Classes/User.php";
