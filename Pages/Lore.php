@@ -17,6 +17,7 @@
 <body>
   <header>
     <?php
+    session_start();
     $activePage = "Lore";
     include "../Parts/Header.php"; ?>
   </header>

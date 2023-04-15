@@ -14,85 +14,108 @@ if (!isset($_SESSION["user"])) {
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starcraft | Főoldal</title>
-    <meta name="description" content="Bemutató oldal a Starcraft világáról">
+    <title>Összes felhasználó</title>
+    <meta name="description" content="Összes felhasználó">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Images/SCLogo.png">
 </head>
 
 <body>
-    <header>
-        <?php
-        $activePage = "AllUsers";
-        include_once "../Parts/Header.php";
-        include_once "../Classes/User.php";
-        include_once "../Functions/SaveLoad.php";
-        $users = loadAll();
-        ?>
-    </header>
+<header>
+    <?php
+    $activePage = "AllUsers";
+    include_once "../Parts/Header.php";
+    include_once "../Classes/User.php";
+    include_once "../Functions/SaveLoad.php";
+    $users = loadAll();
+    $username = $_SESSION["user"]["nev"];
 
-    <div class="empty"></div>
-    <table>
-        <thead>
-        <tr>
-            <th>Profilkép</th>
-            <th>Felhasználónév</th>
-            <th>Faj</th>
-            <th>Privilige</th>
-        </tr>
-        </thead>
-        <?php foreach ($users as $user){ ?>
-        <tr>
+    foreach ($users as $userForView) {
+        if (isset($_POST[$userForView["nev"]])) {
+            $_SESSION["profil"] = $userForView;
+            header("Location: ViewProfile.php");
+//                echo var_dump($_SESSION["profil"]);
+        }
+    }
+    foreach ($users as $userToDelete) {
+        if (isset($_POST["adminDelete".$userToDelete["nev"]])) {
+            $userToDelete = loadIn($userToDelete);
+            deleteUser($userToDelete);
+            header("Location: AllUsers.php");
+
+        }
+    }
+    ?>
+</header>
+
+<div class="empty"></div>
+<table class="profile">
+    <thead>
+    <tr>
+        <th>Profilkép</th>
+        <th>Felhasználónév</th>
+        <th>Faj</th>
+        <th>Privilige</th>
+    </tr>
+    </thead>
+    <?php
+    foreach ($users as $user) { ?>
+        <tr <?php if ($user["nev"] === $_SESSION["user"]["nev"]) {
+            echo "class = " . "allUserActive";
+        } ?>>
             <td>
-                <a target="_blank" href="<?php echo $user["profpic"]; ?>">
-                    <img class="unit" src= "<?php echo $user["profpic"]; ?>" alt="Profil kép">
-                </a>
+                <img class="unit" src="<?php echo $user["profpic"]; ?>" alt="Profil kép">
             </td>
             <td class="tablaEgysegnev"><?php
-                if($user["nev"]===$_SESSION["user"]["nev"]){
-                    echo "<strong>". $user["nev"] ."</strong>";
-                } else {
-                    echo $user["nev"];
+                if ($user["nev"] === $_SESSION["user"]["nev"]) {
+                    ?>
+                    <!--                    <a href="UserProfile.php"  > --><?php //echo$user["nev"]
+                    ?><!-- </a>-->
+                    <form action="../Pages/AllUsers.php" method="post">
+                        <input type="submit" name="<?php echo $user["nev"] ?>" value="<?php echo $user["nev"] ?>">
+                    </form>
+                    <?php
+                } else { ?>
+                    <!--                    <a href="UserProfile.php" onclick= profil($user) > --><?php //echo$user["nev"]?><!-- </a>-->
+                    <form action="../Pages/AllUsers.php" method="post">
+                        <input type="submit" name="<?php echo $user["nev"] ?>" value="<?php echo $user["nev"] ?>">
+                    </form>
+                    <?php
                 } ?></td>
             <td class="tablaEgysegnev">
                 <?php echo $user["race"]; ?>
             </td>
             <td class="tablaEgysegnev"><?php
                 switch ($user["priviledge"]) {
-                    case "0":
+                    case "1":
                         echo "Admin";
                         break;
-                    case "1":
+                    case "0":
                         echo "Felhasználó";
-                        break;
-                    case "2":
-                        echo "Vendég";
                         break;
                     default;
                         break;
                 }
                 ?></td>
-            <?php if ($_SESSION["user"]["priviledge"]==0){ ?>
-            <td class="tablaEgysegnev">
-
-                    <form action="../FormHandlers/DeleteAccount.php" method="POST">
-                        <input type="submit" name="deleteaccount" value="Felhasználói fiók törlése">
+            <?php if (($_SESSION["user"]["priviledge"] > 0) && ($_SESSION["user"]["nev"] != $user["nev"])) { ?>
+                <td class="tablaEgysegnev">
+                    <form action="../Pages/AllUsers.php" method="POST">
+                        <input type="submit" name="adminDelete<?php echo $user["nev"] ?>"
+                               value="Felhasználói fiók törlése">
                     </form>
                 </td>
-            <?php } ?>
+            <?php } else { ?>
             <td>
+            </td>
+            <?php } ?>
         </tr>
-
     <?php } ?>
-    </table>
-
-
-
-
-    <footer>
-
-    </footer>
+</table>
+<footer>
+    <?php
+    include "../Parts/footer.php";
+    ?>
+</footer>
 </body>
-
 </html>
