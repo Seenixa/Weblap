@@ -1,10 +1,12 @@
-<!--Az összes User-t kilistázva jelenítni meg. Ha admin nézi az oldalt, akkor egy fiók törlése gomb jelenik meg, amivel az admin törli a felhasználó fiókot-->
 <?php
 session_start();
 if (!isset($_SESSION["user"])) {
     header("Location: login.php");
 }
 ?>
+
+<!--Az összes User-t kilistázva jelenítni meg. Ha admin nézi az oldalt, akkor egy fiók törlése gomb jelenik meg, amivel az admin törli a felhasználó fiókot-->
+
 <!DOCTYPE html>
 <html lang="hu">
 

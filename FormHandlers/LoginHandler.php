@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html class="RegisterLogin" lang="hu">
 
@@ -12,12 +15,9 @@
 </head>
 
 <body class="RegisterLoginBody">
-
     <?php
-    session_start();
     include_once "../Classes/User.php";
     include_once "../Functions/SaveLoad.php";
-
     $userBase = loadAll();
     $message = "";
 

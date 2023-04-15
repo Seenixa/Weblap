@@ -7,8 +7,8 @@ function deleteUser($user)
 {
     $userBase = loadAll();
     foreach ($userBase as $registeredUser) {
-        if ($registeredUser->name == $user->name) {
-            $key = array_keys($userBase, $user->name);
+        if ($registeredUser["nev"] == $user->getName()) {
+            $key = array_keys($userBase, $registeredUser);
             unset($userBase[$key[0]]);
             saveAll($userBase);
         }

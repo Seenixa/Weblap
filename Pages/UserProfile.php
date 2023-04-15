@@ -1,10 +1,12 @@
-<!-- Adott felhasználó profilja. Kiírja a felhasználó nevét, e-mail címét, kedvenc faját és megjeleníti a profilképét. -->
 <?php
 session_start();
 if (!isset($_SESSION["user"])) {
     header("Location: login.php");
 }
 ?>
+
+<!-- Adott felhasználó profilja. Kiírja a felhasználó nevét, e-mail címét, kedvenc faját és megjeleníti a profilképét. -->
+
 <!DOCTYPE html>
 <html lang="hu">
 

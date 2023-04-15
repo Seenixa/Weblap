@@ -1,27 +1,26 @@
-<!--Felhasználó profilja. Itt tudja törölni a fiókját, illetve tud módosítani néhány adatán (jelszó, kedvenc faj, profilkép) -->
 <?php
 session_start();
 if (!isset($_SESSION["user"])) {
     header("Location: login.php");
 }
 ?>
+<!--Felhasználó profilja. Itt tudja törölni a fiókját, illetve tud módosítani néhány adatán (jelszó, kedvenc faj, profilkép) -->
 <!DOCTYPE html>
-<html lang="hu">
+<html class="RegisterLogin" lang="hu">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starcraft | Főoldal</title>
-    <meta name="description" content="Bemutató oldal a Starcraft világáról">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starcraft | Bejelentkezés</title>
+    <meta name="description" content="Bejelentkezés">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Images/SCLogo.png">
 </head>
 
-<body>
+<body class = FormBody>
+<a class="Home" href="index.php">Főoldal</a>
     <?php
-    session_start();
     $activePage = "AccountManagement";
     include_once "../Classes/User.php";
     include_once "../Functions/SaveLoad.php";
