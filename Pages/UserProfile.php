@@ -8,7 +8,7 @@ if (!isset($_SESSION["user"])) {
 <!-- Adott felhasználó profilja. Kiírja a felhasználó nevét, e-mail címét, kedvenc faját és megjeleníti a profilképét. -->
 
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
@@ -31,7 +31,6 @@ if (!isset($_SESSION["user"])) {
         ?>
     </header>
     <?php
-
     $username = $_SESSION["user"]["nev"];
     $email = $_SESSION["user"]["email"];
     $race = $_SESSION["user"]["race"];
@@ -39,13 +38,53 @@ if (!isset($_SESSION["user"])) {
     $priviledge = $_SESSION["user"]["priviledge"];
 //   echo var_dump($_SESSION["user"]);
     ?>
+    <table>
+        <tr>
+            <th colspan="2">
+                <a target="_blank" href="<?php echo $profilePicture; ?>">
+                <img class="profilPic" src= "<?php echo "$profilePicture";?>" alt="Profile picture"><br>
+                </a>
+            </th>
+        </tr>
+        <tr>
+            <th>Felhasználónév:</th>
+            <td class="tablaProfil"> <?php echo "$username<br>"; ?></td>
+        </tr>
+        <tr>
+            <th>E-mail:</th>
+            <td class="tablaProfil"><a href="mailto:<?php echo "$email"; ?>"><?php echo "$email"; ?></a>
+                </td>
+        </tr>
+        <tr>
+            <th>Kedvenc faj:</th>
+            <td class="tablaProfil"><?php echo "$race"; ?></td>
+        </tr>
+        <tr>
+            <th>Privilégium:</th>
+            <td class="tablaProfil">
+            <?php
+            switch ($priviledge) {
+                case "1":
+                    echo "Admin";
+                    break;
+                case "0":
+                    echo "Felhasználó";
+                    break;
+                default;
+                    break;
+            }
+            ?>
+            </td>
+        </tr>
 
-    <img src= "<?php echo "$profilePicture"; ?>" alt="Profile picture">
-    <?php echo "$username<br>"; ?>
-    <?php echo "$race"; ?>
+    </table>
 
+<!--    --><?php //echo var_dump($_SESSION["profil"]); ?>
 
     <footer>
+        <?php
+        include "../Parts/footer.php";
+        ?>
     </footer>
 </body>
 

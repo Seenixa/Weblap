@@ -71,7 +71,6 @@ html {
 .MainPageContent a {
     color: white;
     background-color: #033671;
-    padding: 10px;
     border-radius: 5px;
     text-align: left;
     margin-top: 30px;
@@ -186,13 +185,15 @@ nav ul {
 
 /* Style the subnav links */
 .subnav-content a {
+    height: 28px;
     float: left;
     color: white;
     text-decoration: none;
+    padding-top: 20px;
 }
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
-    height: 43px;
+    height: 60px;
     overflow: visible;
     display: block;
 }
@@ -372,9 +373,30 @@ td {
     vertical-align: middle;
 }
 
-td.tablaEgysegnev {
+
+/* Felhasználó fiók*/
+th {
+    vertical-align: middle;
+}
+
+td>a {
+    color: white;
+}
+
+.profilPic {
+    margin-top: 50px;
+    height: 200px;
+    border: 1px black;
+}
+.tablaProfil {
+    border: none;
     text-align: center;
 }
+.allUserActive {
+    background-color: rgba(7, 21, 33, 0.55);
+}
+
+
 
 /* Regisztráció, Bejelentkezés */
 
@@ -448,7 +470,6 @@ td.tablaEgysegnev {
 .LoginLink {
     color: white;
     background-color: #012651;
-    padding: 10px;
     border-radius: 5px;
     text-align: left;
     margin-top: 30px;

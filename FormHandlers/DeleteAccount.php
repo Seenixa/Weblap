@@ -50,7 +50,8 @@ if (isset($_POST["deleteaccount"])) {
     }
 
     echo "<div class = RegisterLoginReactFirst>$message <br/></div>";
-
 }
+
+
 ?>
 </body>
