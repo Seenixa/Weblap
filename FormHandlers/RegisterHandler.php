@@ -36,6 +36,12 @@
         $errors[] = "A felhasználónév már használatban van.";
       }
     }
+    
+    foreach($userBase as $user){
+      if ($user["email"] == $email){
+          $errors[] = "Az e-mail cím már használatban van.";
+      }
+  }
 
     // Adott-e meg választ a kedvenc fajra regisztrációnál
   
