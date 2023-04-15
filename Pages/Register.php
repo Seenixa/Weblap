@@ -14,21 +14,21 @@
 <body class="RegisterLoginBody">
   <a class="Home" href="../Pages/index.php">Főoldal</a>
   <form action="../FormHandlers/RegisterHandler.php" method="post">
-    <label>Felhasználó Név: <br><input type="text" name="nev" value="" placeholder="Név" maxlength="20" minlength="5"
+    <label>*Felhasználó Név<br>(Legalább 5 maximum 20 karakter): <br><input type="text" name="nev" value="" placeholder="Név" maxlength="20" minlength="5"
         autofocus tabindex="1" required>
     </label><br>
     <fieldset>
       <legend>E-mail</legend>
-      <label>E-mail cím: <br><input type="email" name="email" value="" placeholder="E-mail" tabindex="2"
+      <label>*E-mail cím: <br><input type="email" name="email" value="" placeholder="E-mail" tabindex="2"
           required></label><br>
-      <label>E-mail cím megerősítése: <br><input type="email" name="RepeatEmail" value="" placeholder="E-mail"
+      <label>*E-mail cím megerősítése: <br><input type="email" name="RepeatEmail" value="" placeholder="E-mail"
           tabindex="3" required></label><br>
     </fieldset>
     <fieldset>
       <legend>Jelszó</legend>
-      <label>Jelszó: <br><input type="password" name="pw" value="" placeholder="Jelszó" maxlength="20" minlength="5"
+      <label>*Jelszó<br>(Legalább 5 maximum 20 karakter): <br><input type="password" name="pw" value="" placeholder="Jelszó" maxlength="20" minlength="5"
           tabindex="4" required></label><br>
-      <label>Jelszó megerősítése: <br><input type="password" name="Repeatpw" value="" placeholder="Jelszó"
+      <label>*Jelszó megerősítése: <br><input type="password" name="Repeatpw" value="" placeholder="Jelszó"
           maxlength="20" minlength="5" tabindex="5" required></label><br>
     </fieldset>
 
@@ -40,8 +40,9 @@
       <option value="Protoss">Protoss</option>
     </select><br>
 
-    <label class="registerCheck" for="checkbox1">Elfogadom a felhasználási feltételeket. </label>
+    <label class="registerCheck" for="checkbox1">*Elfogadom a felhasználási feltételeket.</label>
     <input type="checkbox" id="checkbox1" name="agreement" value="agree" tabindex="7" required> <br>
+    <div><strong>A *-al jelölt mezők kitöltése kötelező!</strong> </div>
 
 
     <input class="submit" type="reset" value="Újratöltés">

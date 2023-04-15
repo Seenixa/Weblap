@@ -37,7 +37,7 @@ if (!isset($_SESSION["user"])) {
     ?>
     <?php
     echo "<a target=_blank href=$profilePicture>
-    <img class=unit src=$profilePicture alt=Profile Picture> </a>";
+    <img class=unit src=$profilePicture alt=ProfilePicture> </a>";
     ?>
     <form action="../FormHandlers/NewRace.php" method="POST">
         <h2>Kedvenc faj:</h2>
@@ -78,8 +78,6 @@ if (!isset($_SESSION["user"])) {
             <input type="submit" name="deleteaccount" value="Felhasználói fiók törlése">
         </fieldset>
     </form>
-    <footer>
-    </footer>
 </body>
 
 </html>

@@ -21,7 +21,7 @@ if (!isset($_SESSION["user"])) {
     <link rel="icon" href="../Images/SCLogo.png">
 </head>
 
-<body>
+<body class = FormBody>
     <header>
         <?php
         $activePage = "UserProfile";
@@ -81,11 +81,6 @@ if (!isset($_SESSION["user"])) {
 
 <!--    --><?php //echo var_dump($_SESSION["profil"]); ?>
 
-    <footer>
-        <?php
-        include "../Parts/footer.php";
-        ?>
-    </footer>
 </body>
 
 </html>

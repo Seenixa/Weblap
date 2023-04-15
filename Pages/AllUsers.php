@@ -21,7 +21,7 @@ if (!isset($_SESSION["user"])) {
     <link rel="icon" href="../Images/SCLogo.png">
 </head>
 
-<body>
+<body class = FormBody>
 <header>
     <?php
     $activePage = "AllUsers";
@@ -35,7 +35,6 @@ if (!isset($_SESSION["user"])) {
         if (isset($_POST[$userForView["nev"]])) {
             $_SESSION["profil"] = $userForView;
             header("Location: ViewProfile.php");
-//                echo var_dump($_SESSION["profil"]);
         }
     }
     foreach ($users as $userToDelete) {
@@ -70,14 +69,14 @@ if (!isset($_SESSION["user"])) {
             <td class="tablaEgysegnev"><?php
                 if ($user["nev"] === $_SESSION["user"]["nev"]) {
                     ?>
-                    <!--                    <a href="UserProfile.php"  > --><?php //echo$user["nev"]
-                    ?><!-- </a>-->
+                    
+                    
                     <form action="../Pages/AllUsers.php" method="post">
                         <input type="submit" name="<?php echo $user["nev"] ?>" value="<?php echo $user["nev"] ?>">
                     </form>
                     <?php
                 } else { ?>
-                    <!--                    <a href="UserProfile.php" onclick= profil($user) > --><?php //echo$user["nev"]?><!-- </a>-->
+                    
                     <form action="../Pages/AllUsers.php" method="post">
                         <input type="submit" name="<?php echo $user["nev"] ?>" value="<?php echo $user["nev"] ?>">
                     </form>
@@ -112,10 +111,5 @@ if (!isset($_SESSION["user"])) {
         </tr>
     <?php } ?>
 </table>
-<footer>
-    <?php
-    include "../Parts/footer.php";
-    ?>
-</footer>
 </body>
 </html>

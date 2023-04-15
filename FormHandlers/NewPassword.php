@@ -40,7 +40,7 @@ if (isset($_POST["pwchange"])) {
                         saveAll($userBase);
                     }
                     $message = "A Jelszó megváltozott<br>" 
-                    . "<br><a class=LoginLink href=../Pages/AccountManagement.php>Újrapróbálkozás</a><br>"
+                    . "<br><a class=LoginLink href=../Pages/AccountManagement.php>Vissza a fiókkezeléshez</a><br>"
                     . "<br><a class=LoginLink href=../Pages/index.php>Vissza a főoldalra</a>";
                 } else {
                     $message = "A jelszó változtatása sikertelen.<br>" 

@@ -21,6 +21,7 @@ include "../Functions/SaveLoad.php";
 if (isset($_POST["emailchange"])) {
     $user = loadIn($_SESSION["user"]);
     $message = "";
+    $usedEmail = false;
     $userBase = loadAll();
 
     //ellenőrzések
@@ -30,6 +31,7 @@ if (isset($_POST["emailchange"])) {
         if ($_POST["email"] == $_POST["repeatemail"]) {
 
             if ($_POST["email"] != $user->getEmail()) {
+
 
                 if ($user->setEmail($_POST["email"])) {
                     $_SESSION["user"]["email"] = $user->getEmail();
@@ -41,10 +43,10 @@ if (isset($_POST["emailchange"])) {
                         saveAll($userBase);
                     }
                     $message = "Az E-mail cím változtatása sikeres<br>" 
-                    . "<br><a class=LoginLink href=../Pages/AccountManagement.php>Újrapróbálkozás</a><br>"
+                    . "<br><a class=LoginLink href=../Pages/AccountManagement.php>Vissza a fiókkezeléshez</a><br>"
                     . "<br><a class=LoginLink href=../Pages/index.php>Vissza a főoldalra</a>";
                 } else {
-                    $message = "A megadott E-mail cím formailag helytelen<br>" 
+                    $message = "A megadott E-mail cím formailag helytelen vagy már használatban van<br>" 
                     . "<br><a class=LoginLink href=../Pages/AccountManagement.php>Újrapróbálkozás</a><br>"
                     . "<br><a class=LoginLink href=../Pages/index.php>Vissza a főoldalra</a>";
                 }

@@ -43,6 +43,13 @@ class User
     }
     function setEmail($email)
     {
+        $userBase = loadAll();
+        foreach($userBase as $user){
+            if ($user["email"] == $email){
+                return false;
+            }
+        }
+        
         if (str_contains($email, "@") && str_contains($email, ".")) {
             $this->email = $email;
             return true;

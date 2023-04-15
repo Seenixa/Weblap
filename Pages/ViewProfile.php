@@ -78,11 +78,6 @@ $priviledge = $_SESSION["profil"]["priviledge"];
 
 <!--    --><?php //echo var_dump($_SESSION["profil"]); ?>
 
-<footer>
-    <?php
-    include "../Parts/footer.php";
-    ?>
-</footer>
 </body>
 
 </html>

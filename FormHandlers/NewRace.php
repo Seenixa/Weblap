@@ -36,7 +36,7 @@ if (isset($_POST["racechange"])) {
                     saveAll($userBase);
                 }
                 $message = "A faj megváltozott.<br>" 
-                . "<br><a class=LoginLink href=../Pages/AccountManagement.php>Újrapróbálkozás</a><br>"
+                . "<br><a class=LoginLink href=../Pages/AccountManagement.php>Vissza a fiókkezeléshez</a><br>"
                 . "<br><a class=LoginLink href=../Pages/index.php>Vissza a főoldalra</a>";
             } else {
                 $message = "A faj megváltoztatása sikertelen.<br>" 
