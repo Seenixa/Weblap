@@ -6,6 +6,9 @@
         $zergActive = "";
         $protossActive = "";
         $loreActive = "";
+        $allUsers = "";
+        $userProfile = "";
+        $accountManagement = "";
 
         switch ($activePage) {
             case "Index":
@@ -22,6 +25,15 @@
                 break;
             case "Lore":
                 $loreActive = "class=active";
+                break;
+            case "AllUsers":
+                $allUsers = "class=active";
+                break;
+            case "UserProfile":
+                $userProfile = "class=active";
+                break;
+            case "AccountManagement":
+                $accountManagement = "class=active";
                 break;
             default:
                 break;
@@ -42,9 +54,9 @@
         <div class="subnav">
             <button class="subnavbtn">Fiók kezelés &#9660;</button>
             <div class="subnav-content">
-                <a <?php echo $terranActive ?> href=../Pages/UserProfile.php>Profilom</a>
-                <a <?php echo $zergActive ?> href=../Pages/AllUsers.php>Összes profil</a>
-                <a <?php echo $protossActive ?> href=../Pages/AccountManagement.php>Profilom módosítása</a>
+                <a <?php echo $userProfile ?> href=../Pages/UserProfile.php>Profilom</a>
+                <a <?php echo $allUsers ?> href=../Pages/AllUsers.php>Összes profil</a>
+                <a <?php echo $accountManagement ?> href=../Pages/AccountManagement.php>Profilom módosítása</a>
             </div>
         </div>
         <li><a href=../Functions/Logout.php>Kijelentkezés</a></li>

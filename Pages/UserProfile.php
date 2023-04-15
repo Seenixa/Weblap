@@ -1,4 +1,10 @@
 <!-- Adott felhasználó profilja. Kiírja a felhasználó nevét, e-mail címét, kedvenc faját és megjeleníti a profilképét. -->
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -15,23 +21,26 @@
 
 <body>
     <header>
-
+        <?php
+        $activePage = "UserProfile";
+        include_once "../Parts/Header.php";
+        include_once "../Classes/User.php";
+        include_once "../Functions/SaveLoad.php";
+        ?>
     </header>
     <?php
-    session_start();
-    include_once "../Classes/User.php";
-    include_once "../Functions/SaveLoad.php";
-    $username = $_SESSION["userProfile"]->getName();
-    $password = $_SESSION["userProfile"]->getPassword();
-    $email = $_SESSION["userProfile"]->getEmail();
-    $race = $_SESSION["userProfile"]->getRace();
-    $profilePicture = $_SESSION["userProfile"]->getProfilePicture();
-    $priviledge = $_SESSION["userProfile"]->getpriviledge();
+
+    $username = $_SESSION["user"]["nev"];
+    $email = $_SESSION["user"]["email"];
+    $race = $_SESSION["user"]["race"];
+    $profilePicture = $_SESSION["user"]["profpic"];
+    $priviledge = $_SESSION["user"]["priviledge"];
+//   echo var_dump($_SESSION["user"]);
     ?>
 
-    echo "<img src=$profilePicture alt=Profile picture>";
-    echo "$username<br>";
-    echo "$race";
+    <img src= "<?php echo "$profilePicture"; ?>" alt="Profile picture">
+    <?php echo "$username<br>"; ?>
+    <?php echo "$race"; ?>
 
 
     <footer>

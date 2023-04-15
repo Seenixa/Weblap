@@ -29,12 +29,12 @@
             $userPassword = $_POST["pw"];
 
             $message = "Sikertelen belépés!<br>A belépési adatok nem megfelelők!<br>"
-                . "<br><a class=LoginLink href=../pages/Login.php>Újrapróbálkozás</a><br>"
-                . "<br><a class=LoginLink href=../pages/index.php>Vissza a főoldalra</a>";
+                . "<br><a class=LoginLink href=../Pages/Login.php>Újrapróbálkozás</a><br>"
+                . "<br><a class=LoginLink href=../Pages/index.php>Vissza a főoldalra</a>";
 
             foreach ($userBase as $registeredUser) {
                 if ($registeredUser["nev"] == $userName && password_verify($userPassword, $registeredUser["pw"])) {
-                    $message = "Sikeres belépés!<br>" . "<br><a class=LoginLink href=../pages/index.php>Vissza a főoldalra</a>";
+                    $message = "Sikeres belépés!<br>" . "<br><a class=LoginLink href=../Pages/index.php>Vissza a főoldalra</a>";
                     $_SESSION["user"] = $registeredUser;
                 }
             }
