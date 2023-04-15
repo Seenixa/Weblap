@@ -24,17 +24,6 @@
     </header>
 
     <div class="empty"></div>
-    <?php if (isset($_SESSION["user"])) {
-        echo "<div><br><br><a href=../Functions/logout.php>Kijelentkezés</a></div>";
-        echo "<div><br><br><a href=AllUsers.php>Regisztrált felhasználók</a></div>";
-        echo "<div><br><br><a href=AccountManagement.php>Fiók kezelés</a></div>";
-        echo "<div><br><br><a href=Userprofile.php>Adatlap</a></div>";
-        foreach ($_SESSION["user"] as $user)
-            echo $user;
-    } else {
-        echo "<div><br><br><a href=Login.php>Bejelentkezés</a></div>";
-    }
-    ?>
 
     <div class="WoL">
         <section class="MainPageContent">

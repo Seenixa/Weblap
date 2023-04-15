@@ -10,11 +10,10 @@
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="icon" href="../Images/SCLogo.png">
 </head>
-
 <body class="RegisterLoginBody">
   <?php
   include_once "../Classes/User.php";
-  include_once "SaveLoad.php";
+  include_once "../Functions/SaveLoad.php";
 
   if (isset($_POST["register"])) {
     $username = $_POST["nev"];
@@ -80,9 +79,9 @@
       foreach ($errors as $error) {
         echo "<div class=RegisterLoginReact>$error<br></div>";
       }
-      echo "<div class=RegisterLoginReact><br><a class=LoginLink href=../pages/Register.php>Újrapróbálkozás</a><br></div>";
+      echo "<div class=RegisterLoginReact><br><a class=LoginLink href=../Pages/Register.php>Újrapróbálkozás</a><br></div>";
     }
-    echo "<div class=RegisterLoginReact><br><a class=LoginLink href=../pages/index.php>Vissza a főoldalra</a><br></div>";
+    echo "<div class=RegisterLoginReact><br><a class=LoginLink href=../Pages/index.php>Vissza a főoldalra</a><br></div>";
   }
   ?>
 </body>
